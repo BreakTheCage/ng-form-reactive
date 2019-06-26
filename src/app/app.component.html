@@ -12,7 +12,7 @@
                   class="form-control">
                   <span 
                     class="help-block"
-                    *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched"
+                    *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched"
                     >Please inter a valid username!</span>
               </div>
               <div class="form-group">
@@ -24,8 +24,8 @@
                   class="form-control">
                   <span 
                     class="help-block"
-                    *ngIf="!signupForm.get('email').valid && signupForm.get('username').touched"
-                    >Please inter a valid email!</span>
+                    *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched"
+                    >Please enter a valid email!</span>
               </div>
         </div>
         
@@ -36,6 +36,9 @@
               formControlName="gender"
               [value]="gender">{{ gender }}
           </label>
+        </div>
+        <div>
+          
         </div>
         <span 
               class="help-block"
